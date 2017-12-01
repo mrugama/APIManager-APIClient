@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nasa View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NasaViewController" customModule="URLSessionNasa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHA-A6-NIw">
+                                <rect key="frame" x="0.0" y="40" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6IX-OL-kDk">
+                                <rect key="frame" x="0.0" y="81" width="375" height="270"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CSh-UV-wqM">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="533835134.64842498">
+                                    <!--2017-12-01 15:32:14 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EU-EB-QEW">
+                                <rect key="frame" x="147" y="401" width="80" height="30"/>
+                                <state key="normal" title="Load Image"/>
+                                <connections>
+                                    <action selector="loadImageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0HU-qv-7T4"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cLC-q1-ol1">
+                                <rect key="frame" x="177" y="206" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CSh-UV-wqM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4yJ-mv-EZo"/>
+                            <constraint firstItem="6EU-EB-QEW" firstAttribute="top" secondItem="6IX-OL-kDk" secondAttribute="bottom" constant="50" id="59O-UK-TLP"/>
+                            <constraint firstItem="6IX-OL-kDk" firstAttribute="top" secondItem="IHA-A6-NIw" secondAttribute="bottom" constant="20" id="9Pq-K9-kl5"/>
+                            <constraint firstItem="IHA-A6-NIw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jb4-CF-fvD"/>
+                            <constraint firstItem="CSh-UV-wqM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JsH-HK-iWK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IHA-A6-NIw" secondAttribute="trailing" id="T4I-Ty-ti3"/>
+                            <constraint firstItem="IHA-A6-NIw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="WcZ-el-eMn"/>
+                            <constraint firstItem="6IX-OL-kDk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZzZ-gZ-OFr"/>
+                            <constraint firstItem="cLC-q1-ol1" firstAttribute="centerY" secondItem="6IX-OL-kDk" secondAttribute="centerY" id="bxf-Dc-qfC"/>
+                            <constraint firstAttribute="trailing" secondItem="CSh-UV-wqM" secondAttribute="trailing" id="ewC-IE-6dW"/>
+                            <constraint firstItem="6EU-EB-QEW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="faN-yF-uiz"/>
+                            <constraint firstItem="cLC-q1-ol1" firstAttribute="centerX" secondItem="6IX-OL-kDk" secondAttribute="centerX" id="iOr-Hp-qMP"/>
+                            <constraint firstItem="CSh-UV-wqM" firstAttribute="top" secondItem="6EU-EB-QEW" secondAttribute="bottom" constant="20" id="tyd-gb-gik"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6IX-OL-kDk" secondAttribute="trailing" id="yvL-L2-bar"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="NASAImageView" destination="6IX-OL-kDk" id="rk7-fe-pv2"/>
+                        <outlet property="datePicker" destination="CSh-UV-wqM" id="1fS-me-zhi"/>
+                        <outlet property="spiner" destination="cLC-q1-ol1" id="Fuz-XJ-H33"/>
+                        <outlet property="titleLabel" destination="IHA-A6-NIw" id="U5Q-ex-op6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
